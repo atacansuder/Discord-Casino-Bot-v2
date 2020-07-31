@@ -1,0 +1,86 @@
+{
+    "298884333970784256": {
+        "userdata": {
+            "points": 15,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "slot": {
+            "times_played_in_interval": 15,
+            "last_played": 1596186997883
+        }
+    },
+    "257942012475473921": {
+        "userdata": {
+            "points": 1000,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "slot": {
+            "times_played_in_interval": 15,
+            "last_played": 1596144319476
+        }
+    },
+    "214508332919029760": {
+        "userdata": {
+            "points": 760,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "slot": {
+            "times_played_in_interval": 15,
+            "last_played": 1596193187202
+        }
+    },
+    "218406461158588416": {
+        "userdata": {
+            "points": 1590,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "slot": {
+            "times_played_in_interval": 15,
+            "last_played": 1596193206175
+        }
+    },
+    "558091431449985052": {
+        "userdata": {
+            "points": 1225,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "slot": {
+            "times_played_in_interval": 15,
+            "last_played": 1596194644366
+        }
+    },
+    "293083992457084929": {
+        "userdata": {
+            "points": 1000,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "322100311508516875": {
+        "userdata": {
+            "points": 0,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "slot": {
+            "times_played_in_interval": 1,
+            "last_played": 0
+        }
+    }
+}

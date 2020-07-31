@@ -4,14 +4,13 @@ const fs = require("fs");
 const Enmap = require("enmap");
 
 const config = require('./config.json');
-const players = require('./players.json')
 client.config = config;
-client.players = players;
 
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
   files.forEach(file => {
     const event = require(`./events/${file}`);
+    if(file === "players.json") return;
     let eventName = file.split(".")[0];
     client.on(eventName, event.bind(null, client));
   });

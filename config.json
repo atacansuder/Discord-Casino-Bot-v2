@@ -2,5 +2,6 @@
     "token": "NzAzMTc2MDkxMzU0NzkyMDA3.XqKxxA.oPwK8CJ1h8jH7AOAEqPrGAC6sK4",
     "prefix": ">",
     "ownerID": "298884333970784256",
-    "players_loc": "./players.json"
+    "players_loc": "./events/players.json",
+    "slot_interval": "30"
 }

@@ -1,8 +1,11 @@
 const fs = require("fs");
+let players = require('./players.json');
 
 module.exports = (client, message) => {
   // Ignore all bots
   if (message.author.bot) return;
+
+  client.players = players;
   if(!client.players[message.author.id]){
     create_user(client, message.author);
   }
