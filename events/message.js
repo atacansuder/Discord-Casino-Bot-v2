@@ -37,6 +37,9 @@ function create_user(c, user) {
       total_earned: 0,
       profit: 0
     },
+    claim: {
+      lastClaim: 0
+    },
     slot: {
       times_played_in_interval: 0,
       last_played: 0

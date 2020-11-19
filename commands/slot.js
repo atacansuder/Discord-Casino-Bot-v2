@@ -16,9 +16,9 @@ exports.run = (client, message, args) => {
         });
     }
     
-    if(client.players[message.author.id].slot.times_played_in_interval >= 15)
+    if(client.players[message.author.id].slot.times_played_in_interval >= 20)
     {
-        message.channel.send("**" + message.author.username + "**, saatlik slot oynama limiti 15'tir. Kalan süre: **" + String(parseInt(client.config.slot_interval) - Math.round((msg_date - last_played) / 60000)) + " dk.**");
+        message.channel.send("**" + message.author.username + "**, you can only play 20 times in an interval. Time left: **" + String(parseInt(client.config.slot_interval) - Math.round((msg_date - last_played) / 60000)) + " min.**");
         return;
     }
 
@@ -102,17 +102,17 @@ exports.run = (client, message, args) => {
     if(yen_counter > 0){
         if(yen_counter === 3)
         {
-            message.channel.send("Tebrikler **" + message.author.username + "**, " + bet_amount * 500 + "$ kazandınız.");
+            message.channel.send("Congrats **" + message.author.username + "**, you have won " + bet_amount * 500 + "$.");
             client.players[message.author.id].userdata.points += bet_amount * 500;
         }
         else if(yen_counter === 2)
         {
-            message.channel.send("Tebrikler **" + message.author.username + "**, " + bet_amount * 5 + "$ kazandınız.");
+            message.channel.send("Congrats **" + message.author.username + "**, you have won " + bet_amount * 5 + "$.");
             client.players[message.author.id].userdata.points += bet_amount * 5;
         }
         else if(yen_counter === 1)
         {
-            message.channel.send("Tebrikler **" + message.author.username + "**, " + bet_amount * 2 + "$ kazandınız.");
+            message.channel.send("Congrats **" + message.author.username + "**, you have won " + bet_amount * 2 + "$.");
             client.players[message.author.id].userdata.points += bet_amount * 2;
         }
 
@@ -126,7 +126,7 @@ exports.run = (client, message, args) => {
 
     if(results[0] === results[1] && results[0] === results[2])
     {
-        message.channel.send("Tebrikler **" + message.author.username + "**, " + bet_amount * symbol_base[results[0]].pay + "$ kazandınız.");
+        message.channel.send("Congrats **" + message.author.username + "**, you have won " + bet_amount * symbol_base[results[0]].pay + "$");
         client.players[message.author.id].userdata.points += bet_amount * symbol_base[results[0]].pay;
     }
 
@@ -147,21 +147,21 @@ function argIsValid(client, message, args){
     var userpoints = client.players[message.author.id].userdata.points;
 
     if(!args[0]){
-        message.channel.send("**" + message.author.username + "**, lütfen geçerli bir sayı girin.");
+        message.channel.send("**" + message.author.username + "**, please enter a valid number");
         return false;
     }
     if (isNumeric(args[0]) === false){
-        message.channel.send("**" + message.author.username + "**, lütfen geçerli bir sayı girin.");
+        message.channel.send("**" + message.author.username + "**, please enter a valid number.");
         return false;
     }
 
     var bet_amount = parseInt(args[0]);
     if(bet_amount <= 0){
-        message.channel.send("**" + message.author.username + "**, lütfen pozitif bir sayı girin.");
+        message.channel.send("**" + message.author.username + "**, please enter a positive number.");
         return false;
     }
     if(bet_amount > userpoints){
-        message.channel.send("**" + message.author.username + "**, bakiyenizde o kadar para bulunmamakta. (**" + userpoints + "**:dollar:)");
+        message.channel.send("**" + message.author.username + "**, you don't have that much money. (**" + userpoints + "**:dollar:)");
         return false;
     }
 

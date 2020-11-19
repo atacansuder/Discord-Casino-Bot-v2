@@ -1,7 +1,8 @@
 {
-    "token": "NzAzMTc2MDkxMzU0NzkyMDA3.XqKxxA.rRe-r5CQX7XoK0swnzrEG6RCy4U",
+    "token": "NjcyNzkzMjQ5MTM1NTkxNDU2.XjQpig.StEzxBI13lu6vnFrcBNTDNHVtL0",
     "prefix": ">",
     "ownerID": "298884333970784256",
     "players_loc": "./events/players.json",
-    "slot_interval": "20"
+    "slot_interval": "20",
+    "claim_interval": "30"
 }

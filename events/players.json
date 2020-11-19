@@ -1,85 +1,481 @@
 {
     "298884333970784256": {
         "userdata": {
-            "points": 1000,
+            "points": 45159,
             "total_spent": 0,
             "total_earned": 0,
             "profit": 0
         },
+        "claim": {
+            "lastClaim": 1605816213429
+        },
         "slot": {
-            "times_played_in_interval": 15,
-            "last_played": 1596275730215
+            "times_played_in_interval": 20,
+            "last_played": 1605816240463
         }
     },
-    "257942012475473921": {
+    "285488414953046027": {
         "userdata": {
-            "points": 1000,
+            "points": 0,
             "total_spent": 0,
             "total_earned": 0,
             "profit": 0
         },
+        "claim": {
+            "lastClaim": 1605819104013
+        },
         "slot": {
-            "times_played_in_interval": 15,
-            "last_played": 1596537079245
+            "times_played_in_interval": 9,
+            "last_played": 0
         }
     },
-    "214508332919029760": {
+    "130184574490771456": {
         "userdata": {
-            "points": 1000,
+            "points": 100,
             "total_spent": 0,
             "total_earned": 0,
             "profit": 0
         },
-        "slot": {
-            "times_played_in_interval": 15,
-            "last_played": 1596542043055
-        }
-    },
-    "218406461158588416": {
-        "userdata": {
-            "points": 1000,
-            "total_spent": 0,
-            "total_earned": 0,
-            "profit": 0
-        },
-        "slot": {
-            "times_played_in_interval": 15,
-            "last_played": 1596402017402
-        }
-    },
-    "558091431449985052": {
-        "userdata": {
-            "points": 1000,
-            "total_spent": 0,
-            "total_earned": 0,
-            "profit": 0
-        },
-        "slot": {
-            "times_played_in_interval": 15,
-            "last_played": 1596395127178
-        }
-    },
-    "293083992457084929": {
-        "userdata": {
-            "points": 1000,
-            "total_spent": 0,
-            "total_earned": 0,
-            "profit": 0
+        "claim": {
+            "lastClaim": 0
         },
         "slot": {
             "times_played_in_interval": 0,
             "last_played": 0
         }
     },
-    "322100311508516875": {
+    "393133718304194560": {
         "userdata": {
-            "points": 1000,
+            "points": 0,
             "total_spent": 0,
             "total_earned": 0,
             "profit": 0
         },
+        "claim": {
+            "lastClaim": 1605730644396
+        },
         "slot": {
-            "times_played_in_interval": 1,
+            "times_played_in_interval": 13,
+            "last_played": 0
+        }
+    },
+    "313455852860342282": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "323537197472940032": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "211564657914150912": {
+        "userdata": {
+            "points": 0,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 2,
+            "last_played": 0
+        }
+    },
+    "304727112500117515": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "173928534555754496": {
+        "userdata": {
+            "points": 35,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 1605818201547
+        },
+        "slot": {
+            "times_played_in_interval": 16,
+            "last_played": 1605818223636
+        }
+    },
+    "396947388130131979": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "389424418411249676": {
+        "userdata": {
+            "points": 0,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 1605789798297
+        },
+        "slot": {
+            "times_played_in_interval": 2,
+            "last_played": 0
+        }
+    },
+    "161900404098072576": {
+        "userdata": {
+            "points": 11108,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 1605816149011
+        },
+        "slot": {
+            "times_played_in_interval": 20,
+            "last_played": 1605816175210
+        }
+    },
+    "154716917368619008": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "129968368328376320": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "250896149886533633": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "603880371356172288": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "517868617812017167": {
+        "userdata": {
+            "points": 0,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 1605728042914
+        },
+        "slot": {
+            "times_played_in_interval": 2,
+            "last_played": 0
+        }
+    },
+    "203498519477092362": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "621369329404870658": {
+        "userdata": {
+            "points": 1835,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 1605807048664
+        },
+        "slot": {
+            "times_played_in_interval": 20,
+            "last_played": 1605804701766
+        }
+    },
+    "380579440465412106": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "501402899012780052": {
+        "userdata": {
+            "points": 0,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 1605817976259
+        },
+        "slot": {
+            "times_played_in_interval": 14,
+            "last_played": 0
+        }
+    },
+    "767078454420045884": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "747128637760864317": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "323911871935807488": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "274754158412955649": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "388796976004595712": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "238777463520362496": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "414530625815707650": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "410620477346807824": {
+        "userdata": {
+            "points": 0,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 1605801527233
+        },
+        "slot": {
+            "times_played_in_interval": 9,
+            "last_played": 0
+        }
+    },
+    "686355372625363040": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "267820060431745035": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
+            "last_played": 0
+        }
+    },
+    "283042467459104769": {
+        "userdata": {
+            "points": 100,
+            "total_spent": 0,
+            "total_earned": 0,
+            "profit": 0
+        },
+        "claim": {
+            "lastClaim": 0
+        },
+        "slot": {
+            "times_played_in_interval": 0,
             "last_played": 0
         }
     }

@@ -1,0 +1,10 @@
+{
+    "points": {
+        "name": "points",
+        "description": "Shows the amount of points you have."
+    },
+    "slot": {
+        "name": "slot [number]",
+        "description": "Play slot machine with a bet amount of [number]. (Example: !slot 100)"
+    }
+}
