@@ -26,6 +26,13 @@ module.exports = (client, message) => {
   // If that command doesn't exist, silently exit and do nothing
   if (!cmd) return;
 
+  if(client.config.maintenance === 1 && message.author.id != client.config.ownerID && message.channel.id === "777976412039544862"){
+    message.channel.send("The bot is in maintenance mode.");
+    return;
+  }
+
+  //message.channel.send("Update notice: >help command has been added, from now on you can check it after updates to learn about how the bot works and how to play the games.");
+
   cmd.run(client, message, args);
 };
 

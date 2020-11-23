@@ -3,6 +3,7 @@
     "prefix": ">",
     "ownerID": "298884333970784256",
     "players_loc": "./events/players.json",
+    "maintenance": 0,
     "slot_interval": "20",
     "claim_interval": "30"
 }

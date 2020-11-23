@@ -1,10 +1,27 @@
 {
-    "points": {
-        "name": "points",
-        "description": "Shows the amount of points you have."
+    "profile": {
+        "name": "profile @User",
+        "description": "Shows the information about a user's profile (or about you, if nobody's mentioned).",
+        "type": "general"
+    },
+    "money": {
+        "name": "money",
+        "description": "Shows the amount of money you have.",
+        "type": "general"
+    },
+    "rules":{
+        "name": "rules [command]",
+        "description": "Show the rules about a game. (Example: >rules slot)",
+        "type": "general"
+    },
+    "give":{
+        "name": "give @User [number]",
+        "description": "Give the mentioned user the specified amount of money.",
+        "type": "general"
     },
     "slot": {
         "name": "slot [number]",
-        "description": "Play slot machine with a bet amount of [number]. (Example: !slot 100)"
+        "description": "Play slot machine with a bet amount of [number]. (Example: >slot 100)",
+        "type": "game"
     }
 }
