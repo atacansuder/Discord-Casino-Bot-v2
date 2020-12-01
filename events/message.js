@@ -26,9 +26,15 @@ module.exports = (client, message) => {
   // If that command doesn't exist, silently exit and do nothing
   if (!cmd) return;
 
-  if(client.config.maintenance === 1 && message.author.id != client.config.ownerID && message.channel.id === "777976412039544862"){
-    message.channel.send("The bot is in maintenance mode.");
-    return;
+  
+  if(players[message.author.id].userdata.seenUpdate === 0){
+    message.channel.send(":warning: The bot has been updated. Changelog:\n- Blackjack has been added. Type **>rules blackjack** to learn how to play.");
+    players[message.author.id].userdata.seenUpdate = 1;
+    fs.writeFile(client.config.players_loc, JSON.stringify(client.players, null, 4), function (err) {
+      if (err) {
+        console.log(err);
+      }
+    });
   }
 
   //message.channel.send("Update notice: >help command has been added, from now on you can check it after updates to learn about how the bot works and how to play the games.");
@@ -42,7 +48,8 @@ function create_user(c, user) {
       points: 100,
       total_spent: 0,
       total_earned: 0,
-      profit: 0
+      profit: 0,
+      seenUpdate: 0
     },
     claim: {
       lastClaim: 0
@@ -50,6 +57,12 @@ function create_user(c, user) {
     slot: {
       times_played_in_interval: 0,
       last_played: 0
+    },
+    blackjack: {
+      isPlaying: 0,
+      bet: 0,
+      hand: [],
+      dealerHand: []
     }
   }
 

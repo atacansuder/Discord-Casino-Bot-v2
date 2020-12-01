@@ -23,5 +23,10 @@
         "name": "slot [number]",
         "description": "Play slot machine with a bet amount of [number]. (Example: >slot 100)",
         "type": "game"
+    },
+    "blackjack": {
+        "name": "blackjack [number]",
+        "description": "Play blackjack with a bet amount of [number]. (Example: >blackjack 100)",
+        "type": "game"
     }
 }
