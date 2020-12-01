@@ -28,7 +28,7 @@ module.exports = (client, message) => {
 
   
   if(players[message.author.id].userdata.seenUpdate === 0){
-    message.channel.send(":warning: The bot has been updated. Changelog:\n- Blackjack has been added. Type **>rules blackjack** to learn how to play.");
+    message.channel.send(":warning: The bot has been updated. Changelog:\n- Slot machine got updated, one symbol was removed and the probability for other symbols have been increased. Type **>rules slot** to see the new symbols.");
     players[message.author.id].userdata.seenUpdate = 1;
     fs.writeFile(client.config.players_loc, JSON.stringify(client.players, null, 4), function (err) {
       if (err) {
