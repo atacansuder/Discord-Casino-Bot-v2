@@ -8,6 +8,8 @@ exports.run = (client, message, args) => {
         if(client.players.hasOwnProperty(u))
         {
             client.players[u].userdata.seenUpdate = 0;
+            client.players[u].blackjack.canBetInsurance = 0;
+            client.players[u].blackjack.canDoubledown = 0;
         }
     }
 

@@ -3,14 +3,23 @@ const fs = require("fs");
 exports.run = (client, message, args) => {
     
     if(client.players[message.author.id].blackjack.isPlaying === 0) return;
-    client.players[message.author.id].blackjack.canBetInsurance = 0;
-    client.players[message.author.id].blackjack.canDoubledown = 0;
+    if(client.players[message.author.id].blackjack.canDoubledown === 0) return;
     
     const cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "J", "K", "Q"];
     var playerBet = client.players[message.author.id].blackjack.bet;
     var playerHand = client.players[message.author.id].blackjack.hand;
     var dealerHand = client.players[message.author.id].blackjack.dealerHand;
+    client.players[message.author.id].blackjack.canBetInsurance == 0
+    client.players[message.author.id].blackjack.canDoubledown = 0;
 
+    if(client.players[message.author.id].userdata.points < playerBet){
+        message.channel.send("**" + message.author.username + "**, you can't doubledown since you don't have the required amount of money. Try hitting or standing instead.");
+        return;
+    }
+
+    client.players[message.author.id].blackjack.bet += playerBet;
+    client.players[message.author.id].userdata.points -= playerBet;
+    playerBet = playerBet * 2;
     playerHand.push(cards[Math.floor(randomNumber() * 11)]);
     playerHandSize = calculateHand(playerHand);
 
@@ -22,8 +31,9 @@ exports.run = (client, message, args) => {
         client.players[message.author.id].blackjack.bet = 0;
         client.players[message.author.id].blackjack.hand = [];
         client.players[message.author.id].blackjack.dealerHand = [];
+        client.players[message.author.id].blackjack.canDoubledown = 0;
     }
-    else if(playerHandSize === 21){
+    else{
         var dealerHandSize = calculateHand(dealerHand);
         while(dealerHandSize < 17){
             dealerHand.push(cards[Math.floor(randomNumber() * 11)]);
@@ -40,7 +50,6 @@ exports.run = (client, message, args) => {
             client.players[message.author.id].blackjack.isPlaying = 0;
             client.players[message.author.id].blackjack.bet = 0;
             client.players[message.author.id].blackjack.hand = [];
-            client.players[message.author.id].blackjack.dealerHand = [];
         }
         else if(dealerHandSize === 21){
             messageString += ("\nThe hand sizes are the same, you got your money back.");
@@ -68,7 +77,7 @@ exports.run = (client, message, args) => {
             client.players[message.author.id].blackjack.hand = [];
             client.players[message.author.id].blackjack.dealerHand = [];
         }
-
+        client.players[message.author.id].blackjack.canDoubledown = 1;
         fs.writeFile(client.config.players_loc, JSON.stringify(client.players, null, 4), function (err) {
             if (err) {
               console.log(err);

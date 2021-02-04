@@ -36,19 +36,19 @@ exports.run = (client, message, args) => {
 
     const symbol_base = {
         ":yen:": {
-            chance: 8
+            chance: 5
         },
         ":flag_jp:": {
             pay: 1000,
-            chance: 5
-        },
-        ":crown:": {
-            pay: 250,
             chance: 6
+        },
+        ":sushi:": {
+            pay: 250,
+            chance: 7
         },
         ":shinto_shrine:": {
             pay: 125,
-            chance: 9
+            chance: 10
         },
         ":race_car:": {
             pay: 100,
@@ -63,7 +63,7 @@ exports.run = (client, message, args) => {
             chance: 20
         },
         ":woman_elf:": {
-            pay: 25,
+            pay: 30,
             chance: 25
         }
     }

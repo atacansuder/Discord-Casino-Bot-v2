@@ -5,12 +5,24 @@ module.exports = (client, message) => {
   // Ignore all bots
   if (message.author.bot) return;
 
+  if(message.guild.id === "806285340125823049"){
+    var msg = message.content;
+    client.channels.cache.get('647896188384706561').send(message.content);
+    return;
+  }
+
+
   client.players = players;
   if(!client.players[message.author.id]){
     create_user(client, message.author);
   }
 
-
+  if((message.content.includes(':OMEGADANCE:')) || message.content.includes(':LMAO:')){
+    message.channel.send('BWAHAHAHAHAHAHA <:MegaLUL:788553429072871435>');
+  }
+  else if(message.content.includes('😂') || message.content.includes(':forsenJoy:')){
+    message.channel.send('<:forsenJoy:794684896919552060>');
+  }
   var lowerMessage = message.content.toLowerCase();
 
   // Ignore messages not starting with the prefix (in config.json)
@@ -28,7 +40,7 @@ module.exports = (client, message) => {
 
   
   if(players[message.author.id].userdata.seenUpdate === 0){
-    message.channel.send(":warning: The bot has been updated. Changelog:\n- Slot machine got updated, one symbol was removed and the probability for other symbols have been increased. Type **>rules slot** to see the new symbols.");
+    message.channel.send(":warning: **The bot has been updated.** Changelog:\n- Slot machine probabilities have been tweaked.\n - Blackjack has been updated with the option of doubledown and the case where the dealer may have blackjack has been covered. Type **>rules blackjack** to see the updated rules.");
     players[message.author.id].userdata.seenUpdate = 1;
     fs.writeFile(client.config.players_loc, JSON.stringify(client.players, null, 4), function (err) {
       if (err) {
@@ -62,7 +74,9 @@ function create_user(c, user) {
       isPlaying: 0,
       bet: 0,
       hand: [],
-      dealerHand: []
+      dealerHand: [],
+      canBetInsurance: 0,
+      canDoubledown: 0
     }
   }
 

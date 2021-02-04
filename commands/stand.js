@@ -8,6 +8,8 @@ exports.run = (client, message, args) => {
     var playerBet = client.players[message.author.id].blackjack.bet;
     var playerHand = client.players[message.author.id].blackjack.hand;
     var dealerHand = client.players[message.author.id].blackjack.dealerHand;
+    client.players[message.author.id].blackjack.canBetInsurance = 0;
+    client.players[message.author.id].blackjack.canDoubledown = 0;
 
     playerHandSize = calculateHand(playerHand);
     var messageString = ("**" + message.author.username + "**, your hand: " + printHand(playerHand) + " (size: " + playerHandSize + ")");

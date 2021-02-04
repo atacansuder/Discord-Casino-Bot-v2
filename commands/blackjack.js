@@ -15,10 +15,12 @@ exports.run = (client, message, args) => {
     client.players[message.author.id].userdata.points -= bet_amount;
     client.players[message.author.id].blackjack.isPlaying = 1;
     client.players[message.author.id].blackjack.bet = bet_amount;
+    client.players[message.author.id].blackjack.canDoubledown = 1;
 
     var playerHand = [];
     var dealerHand = [];
     const cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "J", "K", "Q"];
+
 
     for(var n = 0; n < 2; n++){
         playerHand.push(cards[Math.floor(randomNumber() * 11)]);
@@ -41,17 +43,43 @@ exports.run = (client, message, args) => {
         client.players[message.author.id].blackjack.bet = 0;
         client.players[message.author.id].blackjack.hand = [];
         client.players[message.author.id].blackjack.dealerHand = [];
-    }
-    else if(dealerHandSize === 21){
-        messageString += ("\nThe dealer has a blackjack! Game over.");
-        message.channel.send(messageString);
-        client.players[message.author.id].blackjack.isPlaying = 0;
-        client.players[message.author.id].blackjack.bet = 0;
-        client.players[message.author.id].blackjack.hand = [];
-        client.players[message.author.id].blackjack.dealerHand = [];
+        client.players[message.author.id].blackjack.canDoubledown = 0;
     }
     else{
-        messageString += ("\nType **>hit** if you want another card or type **>stand** to stand.");
+        if(dealerHand[0] === "A" && client.players[message.author.id].userdata.points >= Math.round(bet_amount/2)){
+            messageString += ("\n**" + message.author.username + "**, the dealer has an Ace. Type **>insurance** if you want to place an insurance bet of **" + Math.round(bet_amount/2) + "$ incase the dealer has blackjack. Otherwise type **>noinsurance**.");
+            client.players[message.author.id].blackjack.canBetInsurance = 1;
+            message.channel.send(messageString);
+            fs.writeFile(client.config.players_loc, JSON.stringify(client.players, null, 4), function (err) {
+                if (err) {
+                  console.log(err);
+                }
+            });
+            return;
+        }
+        else if(dealerHand[0] === "A"){
+            messageString += "\nThe dealer has an Ace but you don't have enough money left to place an insurance bet. The dealer will check if they have a blackjack.";
+            if(dealerHandSize === 21){
+                messageString += "\nThe dealer has blackjack. (**" + dealerHand + "**). You lost.";
+                message.channel.send(messageString);
+                client.players[message.author.id].blackjack.isPlaying = 0;
+                client.players[message.author.id].blackjack.bet = 0;
+                client.players[message.author.id].blackjack.hand = [];
+                client.players[message.author.id].blackjack.dealerHand = [];
+                client.players[message.author.id].blackjack.canDoubledown = 0;
+                fs.writeFile(client.config.players_loc, JSON.stringify(client.players, null, 4), function (err) {
+                    if (err) {
+                      console.log(err);
+                    }
+                });
+                return;
+            }
+            else{
+                messageString += "\nThe dealer doesn't have blackjack.";
+            }
+        }
+
+        messageString += ("\nType **>hit** if you want another card, **>doubledown** to double your bet and draw 1 card or type **>stand** to stand.");
         message.channel.send(messageString);
     }
 
